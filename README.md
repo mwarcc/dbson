@@ -102,9 +102,9 @@ try {
   const bson = BSONSerializer.serialize(doc, { maxDepth: 2 });
 } catch (err) {
   if (err instanceof BSONError) {
-    console.error(\`Error: \${err.message}\`);
-    console.error(\`Code: \${err.code}\`);
-    console.error(\`Path: \${err.details.path}\`);
+    console.error(`Error: ${err.message}`);
+    console.error(`Code: ${err.code}`);
+    console.error(`Path: ${err.details.path}`);
   }
 }
 ```
@@ -137,31 +137,30 @@ try {
 
 ### BSONSerializer
 
-#### \`serialize(data, options)\`
+#### `serialize(data, options)`
 
 Serializes JavaScript objects into BSON format.
 
 Options:
-- \`maxDepth\`: Maximum depth for nested objects (default: 100)
+- `maxDepth`: Maximum depth for nested objects (default: 100)
 
 ### BSONDeserializer
 
-#### \`deserialize(buffer, options)\`
+#### `deserialize(buffer, options)`
 
 Deserializes BSON data into JavaScript objects.
 
 ### ObjectId
 
-- \`constructor(id?: Uint8Array)\`: Create new ObjectId
-- \`toString()\`: Convert to 24-character hex string
-- \`equals(other: ObjectId)\`: Compare with another ObjectId
-- \`getTimestamp()\`: Get creation timestamp
+- `constructor(id?: Uint8Array)`: Create new ObjectId
+- `toString()`: Convert to 24-character hex string
+- `equals(other: ObjectId)`: Compare with another ObjectId
+- `getTimestamp()`: Get creation timestamp
 
 ## Error Codes
 
 | Code | Description |
 |------|-------------|
-| CIRCULAR_REFERENCE | Circular reference detected |
 | MAX_DEPTH_EXCEEDED | Maximum depth exceeded |
 | INVALID_KEY | Invalid key in document |
 | INVALID_TYPE | Unsupported or invalid type |
