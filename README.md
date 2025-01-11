@@ -78,7 +78,7 @@ Where n represents the number of nodes in the object graph.
 ## Usage Examples
 
 ```javascript
-const { BSONSerializer, BSONDeserializer, ObjectId } = require('./bson');
+const { BSONSerializer, BSONDeserializer, ObjectId } = require('./dbson');
 
 // Serialization
 const document = {
