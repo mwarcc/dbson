@@ -5,7 +5,6 @@ A lightweight, zero-dependency BSON (Binary JSON) implementation for Node.js. Th
 
 - 🚀 Zero dependencies
 - 💪 Full BSON spec compliance
-- 🔒 Circular reference detection
 - 🎯 TypeScript-friendly
 - ⚡ High performance
 - 🛡️ Built-in validation
